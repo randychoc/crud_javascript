@@ -1,0 +1,27 @@
+.title {
+  text-align: center;
+  margin-top: 25px;
+}
+.form {
+  margin: auto;
+  max-width: 80%;
+  text-align: center;
+}
+input[type="submit"],
+[aria-label] {
+  cursor: pointer;
+}
+#edit-box {
+  display: none;
+  max-width: 100%;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+#counter{
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.to-do{
+    background-color: transparent;
+}

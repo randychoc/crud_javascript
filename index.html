@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/check.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>CRUD con JavaScript</title>
+  </head>
+  <body>
+    <div>      
+      <img
+        src="img/banner1920x500.png"
+        alt="portada"
+        class="img-fluid"
+        width="100%"
+      />
+    </div>
+    <div class="title">
+      <h1>My Personal To-Do</h1>
+      <p>Things I forgot To Do:</p>
+    </div>
+    <div class="form">
+      <form action="javascript:void(0);" method="POST" onsubmit="crud.Add()">
+        <input type="text" id="add-todo" placeholder="Thing To-Do" />
+        <input type="submit" value="Add" class="btn btn-primary" />
+      </form>
+      <p id="counter"></p>
+      <div id="edit-box" role="aria-hidden">
+        <form action="javascript:void(0);" method="POST" id="save-edit">
+          <input type="text" id="edit-todo" />
+          <input type="submit" value="Save" class="btn btn-success" />
+          <a onclick="CloseInput()" aria-label="Close">&#10006;</a>
+        </form>
+      </div>
+      <table class="table table-hover table-sm">
+        <caption>
+          List of Tasks
+        </caption>
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Task</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody id="tasks"></tbody>
+      </table>
+    </div>
+
+    <script src="crud.js"></script>
+  </body>
+</html>
